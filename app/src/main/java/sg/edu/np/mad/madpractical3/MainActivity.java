@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,8 +49,12 @@ public class MainActivity extends AppCompatActivity {
             // Update the button text based on the new followed status
             if (user.isFollowed()) {
                 btnFollow.setText("Unfollow");
+                Toast t = Toast.makeText(getApplicationContext(), "Followed", Toast.LENGTH_LONG);
+                t.show();
             } else {
                 btnFollow.setText("Follow");
+                Toast t = Toast.makeText(getApplicationContext(), "Unfollowed", Toast.LENGTH_LONG);
+                t.show();
             }
         });
 //        Set the TextViews with the user's name, description and default button messgae
