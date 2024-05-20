@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 import sg.edu.np.mad.madpractical2.R;
 
 public class ListActivity extends AppCompatActivity {
@@ -45,7 +47,12 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int id) {
                 Log.d("ListActivity", "View button clicked, launching MainActivity");
+                Random random = new Random();
+                int min = 100000;
+                int max = 999999;
+                int randomNumber = random.nextInt((max - min) + 1) + min;
                 Intent intent = new Intent(ListActivity.this, MainActivity.class);
+                intent.putExtra("User", Integer.toString(randomNumber));
                 startActivity(intent);
             }
         });

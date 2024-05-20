@@ -28,7 +28,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.Practical2" >
         <activity
-            android:name="sg.edu.np.mad.madpractical2.MainActivity"
+            android:name="sg.edu.np.mad.madpractical3.ListActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,6 +36,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="sg.edu.np.mad.madpractical3.MainActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

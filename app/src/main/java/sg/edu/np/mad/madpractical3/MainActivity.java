@@ -1,5 +1,6 @@
 package sg.edu.np.mad.madpractical3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -47,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tvName.setText(user.name);
+        Intent receivingEnd = getIntent();
+        String message = receivingEnd.getStringExtra("User");
+        tvName.setText("User " + message);
         tvDescription.setText(user.description);
         btnFollow.setText(user.isFollowed() ? "Unfollow" : "Follow");
     }
